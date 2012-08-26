@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<title>xfan ipe - A feature rich and extensible jQuery IPE, EIP plugin</title>
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/flick/jquery-ui-1.8.22.custom.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/dateformat.js"></script>
+<script type="text/javascript" src="tinymce/tiny_mce.js"></script>
+<script type="text/javascript" src="../src/jquery.xfan.ipe.js"></script>
+
+<script type="text/javascript">
+
+$.extend(xfan.ipe.defaultOptions, {
+});
+
+$(function() {
+
+  $("#example001").xfanIpe("/xfanipe/usocco/echo", {
+    init: "jQuery is a new kind of JavaScript Library.",
+    fieldSize: 50
+  });
+
+  $("#example002").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "textarea",
+    init: "jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript"
+  });
+
+  $("#example003").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "radio",
+    options: { 1: "UI lightness", 2: "UI darkness", 3: "Smoothness", 4: "Start", 5: "Redmond" },
+    init: 4,
+    savingMessage: "changing theme..."
+  });
+
+  $("#example004").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "select",
+    options: { 1: "UI lightness", 2: "UI darkness", 3: "Smoothness", 4: "Start", 5: "Redmond" },
+    init: 4,
+    savingMessage: "changing theme..."
+  });
+
+  $("#example005").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "checkbox",
+    options: { 1: "UI lightness", 2: "UI darkness", 3: "Smoothness", 4: "Start", 5: "Redmond" },
+    init: [2,3,5]
+  });
+
+  $("#example006").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "password"
+  });
+
+  $("#example007").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "date",
+    init: { year: 1976, month: 9, day: 3 }
+  });
+
+  $("#example008").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "datepicker",
+    init: { year: 1976, month: 9, day: 3 },
+    fieldSize: 15,
+    datepicker: {
+      dateFormat: "yy/mm/dd"
+    }
+  });
+
+  $("#example009").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "tinymce",
+    tinymce: {
+      theme: "advanced",
+      width: "480",
+      height: "120",
+      convert_urls: false,
+      theme_advanced_buttons1 : "bold,italic,underline,strikethrough,bullist,numlist,|,forecolor,backcolor,|,link,unlink,|,justifyleft,justifycenter,justifyright,fontsizeselect,|,undo,redo,|,code",
+      theme_advanced_buttons2 : "",
+      theme_advanced_buttons3 : "",
+      theme_advanced_toolbar_location : "top",
+      theme_advanced_toolbar_align : "left"
+    },
+    init: "<h2 style=\"font-size: 1.9em;font-weight: bold;color: #5DB0E6;line-height: 1em;\">" +
+            "<span style=\"jq-jquery\">jQuery</span> is a new kind of JavaScript Library." +
+          "</h2>" +
+          "<p>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. <strong>jQuery is designed to change the way that you write JavaScript.</strong></p>"
+  });
+  
+  xfan.ipe.register("name", {
+  
+    toLabel: function(v) {
+      return v.first + " " + v.last;
+    },
+    
+    val: function(v) {
+      if (v) {
+        this.fName.val(v.first);
+        this.lName.val(v.last);
+      } else {
+        return { first: this.fName.val(), last: this.lName.val() };
+      }
+    },
+    
+    createInput: function() {
+      this.fName = $("<input type=\"text\" />").attr("size", 15);
+      this.lName = $("<input type=\"text\" />").attr("size", 15);
+      return $("<span></span>").append(this.fName).append(this.lName);
+    }
+  
+  });
+
+  $("#example010").xfanIpe("/xfanipe/usocco/echo", {
+    formType: "name",
+    init: { first: "Xfantaro", last: "Yamada" },
+    fieldSize: 15
+  });
+  
+});
+  </script>
+
+</head>
+
+<div id="container">
+  <div class="example"><h2>text</h2><p id="example001"></p></div>
+  <div class="example"><h2>textarea</h2><p id="example002"></p></div>
+  <div class="example"><h2>radio</h2><p id="example003"></p></div>
+  <div class="example"><h2>select</h2><p id="example004"></p></div>
+  <div class="example"><h2>checkbox</h2><p id="example005"></p></div>
+  <div class="example"><h2>password</h2><p id="example006"></p></div>
+  <div class="example"><h2>date</h2><p id="example007"></p></div>
+  <div class="example"><h2>datepicker</h2><p id="example008"></p></div>
+  <div class="example"><h2>tinymce</h2><p id="example009"></p></div>
+  <div class="example"><h2>name(custom implementation)</h2><p id="example010"></p></div>
+</div>
+
+</html>
