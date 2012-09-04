@@ -52,6 +52,10 @@ var xfan = { ipe: {
     return template.replace(/#\{([^{}]*)}/g, replace);
   };
   
+  var escapeHTML = function(val) {
+    return $("<div>").text(val).html();
+  };
+  
   $.extend(xfan.ipe.Editable.prototype, {
     
     _init: function(id, opts) {
@@ -236,7 +240,7 @@ var xfan = { ipe: {
     },
     
     toLabel: function(v) {
-      return v;
+      return escapeHTML(v);
     },
 
     addSaveEventListener: function(listener) {
