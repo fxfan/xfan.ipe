@@ -297,7 +297,7 @@ var xfan = { ipe: {
   xfan.ipe.register('textarea', {
 
     toLabel: function(v) {
-      return v.replace(/\n/g, '<br/>');
+      return escapeHTML(v).replace(/\n/g, '<br/>');
     },
     
     val: function(v) {
