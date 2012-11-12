@@ -1,5 +1,5 @@
 {
-  "name": "xfan.ipe",
+  "name": "jquery.xfan.ipe",
   "description": "In Place Editor plugin for jQuery",
   "version": "0.9.5",
   "homepage": "https://github.com/fxfan/xfan.ipe",
@@ -20,7 +20,7 @@
       "url": "https://github.com/fxfan/xfan.ipe/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "xfan.ipe",
+  "main": "jquery.xfan.ipe",
   "engines": {
     "node": "*"
   },
