@@ -1,0 +1,34 @@
+{
+  "name": "xfan.ipe",
+  "description": "In Place Editor plugin for jQuery",
+  "version": "0.9.5",
+  "homepage": "https://github.com/fxfan/xfan.ipe",
+  "author": {
+    "name": "xfan",
+    "email": "fanban.xiaofan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fxfan/xfan.ipe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fxfan/xfan.ipe/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/fxfan/xfan.ipe/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "xfan.ipe",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": ["ipe", "eip", "jquery", "javascript"]
+}

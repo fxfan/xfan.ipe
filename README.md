@@ -14,3 +14,4 @@ Supports following types of input:
 
 ## Demo
 http://xfan.net23.net/xfanipe/demo.html
+

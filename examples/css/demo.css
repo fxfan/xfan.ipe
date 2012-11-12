@@ -1,0 +1,230 @@
+#container {
+  margin: 10px auto 100px;
+}
+
+div.example {
+  margin: 5px 0 20px 0;
+}
+
+div.example h2 {
+  padding: 0;
+  margin: 5px 0;
+}
+
+div.example p {
+  padding: 0;
+  margin: 0;
+}
+
+div.xfanIpeEditable {
+  display: inline-block;
+}
+
+input.xfanIpeSaveButton {
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+input.xfanIpeCancelButton {
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+#example001 div.xfanIpeEditableMouseover {
+  background-color: #ffff99;
+}
+
+#example001 span.xfanIpeEditableMark {
+  display: none;
+}
+
+#example001 span.xfanIpeSavingMessage {
+  display: inline-block;
+  width: 20px;
+  background: url(images/loading_16x16_clover.gif) no-repeat 0 2px;
+  text-indent: -9999px;
+}
+
+#example002 div.xfanIpeEditable {
+  display: block;
+  width: 400px;
+  cursor: pointer;
+}
+
+#example002 span.xfanIpeEditableMark {
+  padding: 0 0 0 4px;
+  font-size: 0.8em;
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example002 span.xfanIpeSavingMessage {
+  display: inline-block;
+  width: 20px;
+  background: url(images/loading_16x16_clover.gif) no-repeat 0 2px;
+  text-indent: -9999px;
+}
+
+#example003 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example003 div.xfanIpeEditableMouseover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example003 span.xfanIpeEditableMark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/ui-icons_cd0a0a_256x240.png);
+  background-position: -64px -112px;
+  text-indent: -9999px;
+}
+
+#example003 span.xfanIpeSavingMessage {
+  font-weight: bold;
+  color: #cd0a0a;
+}
+
+#example004 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example004 div.xfanIpeEditableMouseover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example004 span.xfanIpeEditableMark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/ui-icons_cd0a0a_256x240.png);
+  background-position: -64px -112px;
+  text-indent: -9999px;
+}
+
+#example004 span.xfanIpeSavingMessage {
+  font-weight: bold;
+  color: #cd0a0a;
+}
+
+#example005 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example005 span.xfanIpeEditableMark {
+  padding: 0 0 0 4px;
+  font-size: 0.8em;
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example006 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example006 span.xfanIpeEditableMark {
+  padding: 0 0 0 4px;
+  font-size: 0.8em;
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example006 span.xfanIpePasswordInputLine {
+  display: block;
+}
+
+#example006 span.xfanIpePasswordConfirmLine {
+  display: block;
+}
+
+#example006 span.xfanIpeSavingMessage {
+  display: block;
+}
+
+#example006 span.xfanIpePasswordReenterMessage {
+  margin: 0 4px;
+  font-size: 0.8em;
+  color: #ff6600;
+}
+
+#example006 input.xfanIpeSaveButton {
+  margin: 2px 4px 0 0;
+  padding: 0 4px;
+}
+
+#example006 input.xfanIpeCancelButton {
+  margin: 2px 4px 0 0;
+  padding: 0 4px;
+}
+
+#example007 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example007 div.xfanIpeEditableMouseover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example007 span.xfanIpeEditableMark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/ui-icons_8DC262_256x240.png);
+  background-position: -64px -112px;
+  text-indent: -9999px;
+}
+
+#example008 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example008 div.xfanIpeEditableMouseover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example008 span.xfanIpeEditableMark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/ui-icons_8DC262_256x240.png);
+  background-position: -64px -112px;
+  text-indent: -9999px;
+}
+
+#example009 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example009 span.xfanIpeEditableMark {
+  padding: 0 0 0 4px;
+  font-size: 0.8em;
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#example009 input.xfanIpeSaveButton {
+  margin: 2px 4px 0 0;
+  padding: 0 4px;
+}
+
+#example009 input.xfanIpeCancelButton {
+  margin: 2px 4px 0 0;
+  padding: 0 4px;
+}
+
+#example010 div.xfanIpeEditable {
+  cursor: pointer;
+}
+
+#example010 span.xfanIpeEditableMark {
+  padding: 0 0 0 4px;
+  font-size: 0.8em;
+  color: #0000ff;
+  text-decoration: underline;
+}
