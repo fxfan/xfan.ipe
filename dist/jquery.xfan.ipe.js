@@ -1,4 +1,4 @@
-/*! jquery.xfan.ipe - v0.9.5 - 2012-11-12
+/*! jquery.xfan.ipe - v0.9.5 - 2012-11-13
 * https://github.com/fxfan/xfan.ipe
 * Copyright (c) 2012 xfan; Licensed MIT */
 
@@ -290,8 +290,6 @@ var xfan = { ipe: {
 
       if (this.opts['name'])
         input.attr('name', this.opts['name']);
-
-      input.attr('size', this.opts['fieldSize'] || 30);
       
       return input;
     }
@@ -313,10 +311,6 @@ var xfan = { ipe: {
         .addClass(this.opts['textAreaClass'] || 'xfanIpeTextArea');
       if (this.opts['name'])
         area.attr('name', this.opts['name']);
-      if (this.opts['cols'])
-        area.attr('cols', this.opts['cols']);
-      if (this.opts['cols'])
-        area.attr('cols', this.opts['cols']);
 
       if (this.opts['enableKeyDownEvent'])
         area.addClass('xfanIpeEnableKeyDownEvent');
@@ -857,6 +851,8 @@ var xfan = { ipe: {
       });
       
     });
+    
+    return $(this);
   
   };
   
