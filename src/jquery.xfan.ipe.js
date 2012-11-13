@@ -286,8 +286,6 @@ var xfan = { ipe: {
 
       if (this.opts['name'])
         input.attr('name', this.opts['name']);
-
-      input.attr('size', this.opts['fieldSize'] || 30);
       
       return input;
     }
@@ -309,10 +307,6 @@ var xfan = { ipe: {
         .addClass(this.opts['textAreaClass'] || 'xfanIpeTextArea');
       if (this.opts['name'])
         area.attr('name', this.opts['name']);
-      if (this.opts['cols'])
-        area.attr('cols', this.opts['cols']);
-      if (this.opts['cols'])
-        area.attr('cols', this.opts['cols']);
 
       if (this.opts['enableKeyDownEvent'])
         area.addClass('xfanIpeEnableKeyDownEvent');
