@@ -847,6 +847,8 @@ var xfan = { ipe: {
       });
       
     });
+    
+    return $(this);
   
   };
   
