@@ -1,4 +1,4 @@
-/*! jquery.xfan.ipe - v0.9.5 - 2012-11-13
+/*! jquery.xfan.ipe - v0.9.5 - 2012-11-15
 * https://github.com/fxfan/xfan.ipe
 * Copyright (c) 2012 xfan; Licensed MIT */
 
@@ -80,7 +80,8 @@ var xfan = { ipe: {
           $(this).removeClass(opts['editableMouseoverClass']);
         });
 
-      this.editableLabel = $('<span></span>')
+      var labelTag = opts['labelTag'] || 'span';
+      this.editableLabel = $('<' + labelTag + '></' + labelTag + '>')
         .addClass(opts['editableLabelClass'])
         .appendTo(this.dom);
       

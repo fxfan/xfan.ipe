@@ -76,7 +76,8 @@ var xfan = { ipe: {
           $(this).removeClass(opts['editableMouseoverClass']);
         });
 
-      this.editableLabel = $('<span></span>')
+      var labelTag = opts['labelTag'] || 'span';
+      this.editableLabel = $('<' + labelTag + '></' + labelTag + '>')
         .addClass(opts['editableLabelClass'])
         .appendTo(this.dom);
       
