@@ -1,4 +1,4 @@
-/*! jquery.xfan.ipe - v0.9.5 - 2012-11-15
+/*! jquery.xfan.ipe - v0.9.5 - 2012-12-28
 * https://github.com/fxfan/xfan.ipe
 * Copyright (c) 2012 xfan; Licensed MIT */
 
@@ -798,6 +798,11 @@ var xfan = { ipe: {
           oldValue: oldVal,
           newValue: newVal
         };
+        if (opts.id) {
+          $.extend(ajaxParams, {
+            id: opts.id
+          });
+        }
         $.extend(ajaxParams, opts.data);
     
         if (opts['beforeSave']) {

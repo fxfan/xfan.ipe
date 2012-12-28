@@ -794,6 +794,11 @@ var xfan = { ipe: {
           oldValue: oldVal,
           newValue: newVal
         };
+        if (opts.id) {
+          $.extend(ajaxParams, {
+            id: opts.id
+          });
+        }
         $.extend(ajaxParams, opts.data);
     
         if (opts['beforeSave']) {
