@@ -555,7 +555,7 @@ var xfan = { ipe: {
     
     toLabel: function(v) {
       var y = this.opts['yearDisabled'] ? 1 : v.year;
-      var m = this.opts['monthDisabled'] ? 0 : (v.month - 1);
+      var m = this.opts['monthDisabled'] ? 0 : v.month;
       var d = this.opts['dayDisabled'] ? 1 : v.day;
       return this.fmt.format(new Date(y, m, d));
     },
@@ -563,13 +563,13 @@ var xfan = { ipe: {
     val: function(v) {
       if (v) {
         if (!this.opts['yearDisabled']) this.yearInput.val(v.year);
-        if (!this.opts['monthDisabled']) this.monthInput.val(v.month);
+        if (!this.opts['monthDisabled']) this.monthInput.val(v.month + 1);
         if (!this.opts['dayDisabled']) this.dayInput.val(v.day);
       } else {
         return $.extend({}, 
-          (this.opts['yearDisabled'] ? {} : { year: this.yearInput.val() }),
-          (this.opts['monthDisabled'] ? {} : { month: this.monthInput.val() }),
-          (this.opts['dayDisabled'] ? {} : { day: this.dayInput.val() })
+          (this.opts['yearDisabled'] ? {} : { year: parseInt(this.yearInput.val()) }),
+          (this.opts['monthDisabled'] ? {} : { month: parseInt(this.monthInput.val()) - 1 }),
+          (this.opts['dayDisabled'] ? {} : { day: parseInt(this.dayInput.val()) })
         );
       }
     },
@@ -646,7 +646,7 @@ var xfan = { ipe: {
       }
       return $.datepicker.formatDate(
           this.opts['datepicker']['dateFormat'], 
-          new Date(v.year, v.month - 1, v.day));
+          new Date(v.year, v.month, v.day));
     },
     
     parse: function(s) {
@@ -655,7 +655,7 @@ var xfan = { ipe: {
       if (date === null) {
         return null;
       }
-      return { year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate() };
+      return { year: date.getFullYear(), month: date.getMonth(), day: date.getDate() };
     },
 
     toLabel: function(v) {
