@@ -1,6 +1,6 @@
-/*! jquery.xfan.ipe - v0.9.5 - 2012-12-30
+/*! jquery.xfan.ipe - v0.9.5 - 2013-02-07
 * https://github.com/fxfan/xfan.ipe
-* Copyright (c) 2012 xfan; Licensed MIT */
+* Copyright (c) 2013 xfan; Licensed MIT */
 
 var xfan = { ipe: {
 

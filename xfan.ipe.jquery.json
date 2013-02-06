@@ -1,0 +1,26 @@
+{
+  "name": "xfan.ipe",
+  "title": "In-Place Editor for various types of inputs",
+  "version": "0.9.5",
+  "author": {
+    "name": "xfan",
+    "url": "https://github.com/fxfan"
+  },
+  "dependencies": {
+    "jquery": ">=1.3.2"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/fxfan/xfan.ipe/blob/master/LICENSE-MIT"
+    }
+  ],
+  "files": [
+    "dist/jquery.xfan.ipe.min.js"
+  ],
+  "description": "",
+  "keywords": [ "ipe", "eip" ],
+  "homepage: "https://github.com/fxfan/xfan.ipe",
+  "docs": "https://github.com/fxfan/xfan.ipe"
+}
+
